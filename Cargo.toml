@@ -1,0 +1,25 @@
+[package]
+name = "ip2proxy"
+version = "0.1.0"
+authors = ["IP2Location <support@ip2location.com>"]
+edition = "2018"
+description = "Rust library for IP2Proxy database lookup. It can be used to find the IP addresses which are used as VPN anonymizer, open proxies, web proxies and Tor exits."
+documentation = "https://docs.rs/ip2proxy"
+readme = "readme.md"
+homepage = "https://github.com/ip2location/ip2proxy-rust"
+repository = "https://github.com/ip2location/ip2proxy-rust"
+license = "MIT"
+keywords = ["ip2proxy", "geolocation", "geoip"]
+categories = ["database", "network-programming"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+memmap = "0.7.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_with = "1.6.0"
+
+[lib]
+name = "ip2proxy"
+path = "src/lib.rs"
